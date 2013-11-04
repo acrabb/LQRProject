@@ -1,7 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/mainFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="MergeRootFrame" />
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lightning Quick Reflex\n\n\n\n"
+        android:id="@+id/title"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/accel_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="CHANGE_ME"
+        android:layout_below="@+id/title"
+        />
+    <!--android:textSize="50sp"-->
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/counter"
+        android:textSize="50sp"
+        android:text="CHANGE_ME"
+        android:layout_below="@+id/accel_num"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/max"
+        android:textSize="50sp"
+        android:text="MAX"
+        android:layout_below="@+id/counter"
+        />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Reset Values"
+        android:onClick="resetValues"
+        android:layout_below="@id/max"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button"
+        android:textSize="50dp"
+        />
+</RelativeLayout>
